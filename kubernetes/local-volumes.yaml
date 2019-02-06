@@ -11,7 +11,8 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /mnt/data/pv-1
+    type: DirectoryOrCreate
+    path: data/pv-1
   persistentVolumeReclaimPolicy: Recycle
 ---
 apiVersion: v1
@@ -26,7 +27,8 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /mnt/data/pv-2
+    type: DirectoryOrCreate
+    path: data/pv-2
   persistentVolumeReclaimPolicy: Recycle
 ---
 apiVersion: v1
@@ -41,5 +43,6 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /mnt/data/pv-3
+    type: DirectoryOrCreate
+    path: data/pv-3
   persistentVolumeReclaimPolicy: Recycle
